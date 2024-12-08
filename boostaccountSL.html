@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription - socialLink.com</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffcc00;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 36px;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    .subscription-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .subscription-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .subscription-card:hover {
+      transform: translateY(-10px);
+    }
+    .subscription-card h3 {
+      font-size: 24px;
+      color: #ff5722;
+    }
+    .subscription-card p {
+      font-size: 18px;
+      color: #777;
+    }
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00bcd4;
+    }
+    .subscribe-button {
+      background-color: #ff5a5f;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .subscribe-button:hover {
+      background-color: #ff2a2a;
+    }
+    .boost-info {
+      font-size: 16px;
+      color: #555;
+      margin-top: 10px;
+    }
+    /* Back Button Styles */
+    .back-button {
+      background-color: #00bcd4;
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+    .back-button:hover {
+      background-color: #008c9e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Choose Your Subscription Plan</h1>
+    <p>Boost your account recommendations today!</p>
+  </header>
+
+  <section>
+    <div class="subscription-container">
+      <!-- Subscription Plan 1 -->
+      <div class="subscription-card">
+        <h3>Basic Plan</h3>
+        <p class="price">$5/month</p>
+        <p class="boost-info">10% increase in recommendations</p>
+        <button class="subscribe-button" onclick="selectPlan('5', '10')">Select Plan</button>
+      </div>
+
+      <!-- Subscription Plan 2 -->
+      <div class="subscription-card">
+        <h3>Standard Plan</h3>
+        <p class="price">$10/month</p>
+        <p class="boost-info">20% increase in recommendations</p>
+        <button class="subscribe-button" onclick="selectPlan('10', '20')">Select Plan</button>
+      </div>
+
+      <!-- Subscription Plan 3 -->
+      <div class="subscription-card">
+        <h3>Premium Plan</h3>
+        <p class="price">$15/month</p>
+        <p class="boost-info">30% increase in recommendations</p>
+        <button class="subscribe-button" onclick="selectPlan('15', '30')">Select Plan</button>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="ProfileSL.html" class="back-button">Back to Profile</a>
+  </section>
+
+  <script>
+    // Function to handle plan selection
+    function selectPlan(price, boostPercentage) {
+      alert(`You have selected the plan: $${price}/month with a ${boostPercentage}% boost in account recommendations.`);
+      // Redirect to the payment setup page
+      window.location.href = `payment-setup.html?price=${price}&boost=${boostPercentage}`; // Redirect to payment setup page
+    }
+  </script>
+
+</body>
+</html>

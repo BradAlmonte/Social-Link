@@ -79,6 +79,49 @@
       padding: 10px;
       color: #fff;
     }
+
+    /* Footer Styles */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Social Links Styles */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ff5a5f; /* Customize hover color */
+}
+
+.social-icon i {
+  transition: transform 0.3s;
+}
+
+.social-icon:hover i {
+  transform: scale(1.2);
+}
+
   </style>
 </head>
 <body>
@@ -102,11 +145,27 @@
       <input type="email" id="email" placeholder="Your Email" required>
       <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     </form>
   </section>
 
   <footer>
-    <p>© 2024 socialLink.com | All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    <p>© 2024 social Link | All rights reserved.</p>
   </footer>
 
   <script>

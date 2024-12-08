@@ -67,11 +67,117 @@
       font-size: 18px;
       margin: 10px 0;
     }
+
+    /* Profile Section Styles */
+    .profile-container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-section {
+      margin-bottom: 30px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .username {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .bio {
+      font-size: 16px;
+      color: #777;
+    }
+
+    .age-location {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Boost Account Button */
+    .boost-button {
+      background-color: #ff5a5f; /* Customize button color */
+      color: white;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .boost-button:hover {
+      background-color: #ff2a2a;
+    }
+
+    /* Suggested Accounts Section */
+    .suggested-accounts {
+      margin-top: 40px;
+    }
+
+    .suggestions-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .suggested-account {
+      text-align: center;
+    }
+
+    .suggested-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .suggested-username {
+      font-size: 16px;
+      font-weight: normal;
+      color: #333;
+    }
+
+    /* Footer Styles */
     footer {
       background-color: #00bcd4; /* Cyan Blue */
       text-align: center;
       padding: 10px;
       color: #fff;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icon {
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icon:hover {
+      color: #ff5a5f; /* Customize hover color */
+    }
+
+    .social-icon i {
+      transition: transform 0.3s;
+    }
+
+    .social-icon:hover i {
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -79,12 +185,13 @@
   <header>
     <h1>Welcome to socialLink.com</h1>
     <p>Your connection to a world of possibilities</p>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="Sociallink.html">Home</a>
+    <a href="Aboutpage.html">About</a>
+    <a href="contactpage.html">Contact</a>
   </nav>
 
   <section>
@@ -97,9 +204,65 @@
     </div>
   </section>
 
+  <div class="profile-container">
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <img src="profile5.jpeg" alt="Profile Picture" class="profile-pic">
+      <h2 class="username">John Doe</h2>
+      <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="age-location">Age: 25 | Location: New York</p>
+  
+      <!-- Boost Account Button -->
+      <button class="boost-button" onclick="boostAccount()">Boost Account</button>
+    </div>
+  
+    <!-- Suggested Accounts Section -->
+    <div class="suggested-accounts">
+      <h3>Suggested Accounts</h3>
+      <div class="suggestions-row">
+        <!-- Suggested Account 1 -->
+        <div class="suggested-account">
+          <img src="profile2.jpeg" alt="Suggested Account 1" class="suggested-pic">
+          <p class="suggested-username">Jane Smith</p>
+        </div>
+        <!-- Suggested Account 2 -->
+        <div class="suggested-account">
+          <img src="profile1.jpeg" alt="Suggested Account 2" class="suggested-pic">
+          <p class="suggested-username">Michael Lee</p>
+        </div>
+        <!-- Suggested Account 3 -->
+        <div class="suggested-account">
+          <img src="profile4.jpeg" alt="Suggested Account 3" class="suggested-pic">
+          <p class="suggested-username">Sara Wong</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
   <footer>
-    <p>© 2024 socialLink.com | All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <p>© 2024 socialLink | All rights reserved.</p>
   </footer>
+
+  <script>
+    function boostAccount() {
+      // Redirect to the payment setup page
+      window.location.href = "boostaccountSL.html";  // Replace with your actual payment page URL
+    }
+  </script>
 </body>
 </html>
-
